@@ -153,7 +153,12 @@ check_files() {
     done
     check "firstrun-wallpaper.sh executable" test -x "$CFG/scripts/firstrun-wallpaper.sh"
     check "import-gsettings.sh executable" test -x "$CFG/scripts/import-gsettings.sh"
+    # On an installed system kiro_final strips the live-ISO installer line (and its comments): expected.
+    local delta
+    delta="$(diff "/usr/share/kiro/$ED/$ED/hyprland.lua" "$LUA" 2>/dev/null | grep '^[<>]' \
+        | grep -vE '^< *--|^< on_start\(.*bootmnt.*calamares' || true)"
     if cmp -s "$LUA" "/usr/share/kiro/$ED/$ED/hyprland.lua"; then pass "home hyprland.lua matches the package"
+    elif [[ -z "$delta" ]]; then pass "home hyprland.lua matches the package (installer line stripped by kiro_final)"
     else warn "home hyprland.lua differs from the package (user change, or skel from an older build)"; fi
 }
 
