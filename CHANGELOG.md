@@ -3,6 +3,12 @@
 ## 2026.11.09
 
 ### What Changed
+- `tests/live-check.sh`: one script for a test round on a VM or real box (run it in the logged-in session, `--active`
+  also changes the wallpaper once). It checks every place an earlier Kiro Wayland edition broke: mako taking the
+  notifications, a Variety window at login, logout doing nothing, `QS_CONFIG_PATH` leaking, lock or suspend on
+  idle, an invalid session entry, the GTK theme reset by a wallpaper change, `quickshell-git` coming back, shortcuts
+  the shell never registered, duplicate binds, QML errors. First QEMU run: 77 PASS, 3 WARN, 2 FAIL (archlinux-logout
+  and the premium app not rebuilt yet).
 - Initial config package for the **Kiro Hyprland (Caelestia) edition**, the shell for the coming KiroTux Hyprland
   Caelestia ISO. Kiro's own Hyprland Lua config (taken from kiro-hyprland-noctalia, same keys and look) with the
   Caelestia shell from caelestia-dots instead of noctalia.
@@ -38,6 +44,7 @@
   `quickshell` from extra (caelestia-shell 2.5.0's pinned quickshell commit is inside the 0.3.2 tag).
 
 ### Files Modified
+- `tests/live-check.sh` (not packaged: the PKGBUILD copies only `etc/` and `usr/`)
 - New repo: `etc/skel/.config/kiro-hyprland-caelestia/` (hyprland.lua, keybindings.txt, bg/, scripts/),
   `etc/skel/.config/caelestia/{shell,cli}.json`, `usr/bin/kiro-hyprland-caelestia-{session,hide-upstream-session}`,
   `usr/share/wayland-sessions/kiro-hyprland-caelestia.desktop`, `usr/share/libalpm/hooks/`,

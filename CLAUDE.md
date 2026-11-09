@@ -48,3 +48,5 @@ evaluation, Gate 0 decisions and release state live in the internal
 - Recipe `~/KIRO-PKG-BUILD-APPS/kiro-hyprland-caelestia/` (public, → `~/EDU/nemesis_repo/`); flow
   `flow-kiro-hyprland-caelestia`. Build the four 3PARTY packages first.
 - Test in **QEMU** (plain virtio-vga + 3D) or on metal, not VirtualBox (Quickshell needs GL).
+- Every test round: copy `tests/live-check.sh` to the box and run it in the session (`--active` for the wallpaper
+  test). A new problem found by hand gets a check there in the same session.
