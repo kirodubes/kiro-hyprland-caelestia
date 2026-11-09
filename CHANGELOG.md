@@ -21,6 +21,8 @@
   scheme, clipboard and restart use the `caelestia` CLI.
 - Caelestia brings no polkit agent: `polkit-gnome` is started at login. `cliphist` watchers are started for
   `caelestia clipboard`.
+- Variety autostarts (as on impasto) and its `set_wallpaper_kiro` (kiro-variety-config) hands each wallpaper to
+  `caelestia wallpaper -N -f`. Check on the first boot that no Variety window opens at login (it did on kiro-hyprland).
 - `~/.config/caelestia/cli.json`: `enableHypr` off (the Kirotux premium app owns Hyprland colours through
   `appearance.lua`), Qt off (Kiro uses Kvantum), Chromium policies off (writes to `/etc`), app themes for programs
   Kiro doesn't ship off; `iconTheme` = Surfn, or the CLI would set Papirus.

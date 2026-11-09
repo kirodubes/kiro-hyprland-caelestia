@@ -277,6 +277,8 @@ on_start("wl-paste --type image --watch cliphist store")
 on_start("caelestia shell -d")
 -- First login only: the Kiro wallpaper + a scheme that follows it.
 on_start("~/.config/kiro-hyprland-caelestia/scripts/firstrun-wallpaper.sh")
+-- Variety changes wallpapers (Alt + N/P/T/F); its set_wallpaper_kiro hands each one to `caelestia wallpaper`.
+on_start("variety")
 -- Live ISO only: auto-launch the installer. archiso-gated; kiro_final strips this line on install.
 -- Wrapped in `sh -c` because hl.exec_cmd execs argv directly (no shell) — the `[ ]` test and `&&`
 -- need a real shell to be interpreted; a bare string would just try to exec a binary named "[".
