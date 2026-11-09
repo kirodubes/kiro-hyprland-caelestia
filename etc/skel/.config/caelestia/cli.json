@@ -8,6 +8,7 @@
         "enableSpicetify": false,
         "enablePandora": false,
         "enableWarp": false,
-        "enableZed": false
+        "enableZed": false,
+        "postHook": "~/.config/kiro-hyprland-caelestia/scripts/import-gsettings.sh"
     }
 }

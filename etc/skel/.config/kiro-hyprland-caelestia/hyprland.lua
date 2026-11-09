@@ -51,8 +51,9 @@ local controlcenter = caelestia("dashboard")
 local settings      = caelestia("nexus")       -- Caelestia's own settings window
 local lock          = caelestia("lock")
 -- No IPC opens the wallpaper picker (type ">wallpaper " in the launcher for it); this key picks a
--- random Kiro wallpaper. -N keeps the light/dark mode: the wallpaper only recolours the scheme.
-local wallpaper     = "caelestia wallpaper -N -r /usr/share/backgrounds/kiro"
+-- random Kiro wallpaper. -N keeps the light/dark mode (the wallpaper only recolours the scheme); -n takes every
+-- picture, not only those near the largest screen size.
+local wallpaper     = "caelestia wallpaper -N -n -r /usr/share/backgrounds/kiro"
 
 -- ── Environment ──────────────────────────────────────────────────────────
 -- Force Wayland across toolkits; advertise the session to portals/screenshare.

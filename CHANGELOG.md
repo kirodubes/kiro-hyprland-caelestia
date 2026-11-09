@@ -26,6 +26,11 @@
 - `~/.config/caelestia/cli.json`: `enableHypr` off (the Kirotux premium app owns Hyprland colours through
   `appearance.lua`), Qt off (Kiro uses Kvantum), Chromium policies off (writes to `/etc`), app themes for programs
   Kiro doesn't ship off; `iconTheme` = Surfn, or the CLI would set Papirus.
+- `cli.json` `postHook` = `scripts/import-gsettings.sh`: every scheme apply (each wallpaper change) rewrites dconf's
+  `gtk-theme` (always `adw-gtk3-dark`) and `icon-theme`; the hook puts back what gtk-3.0/4.0 `settings.ini` say, so
+  a theme, icon set or Light mode picked in the premium Look page survives the next wallpaper.
+- `SUPER + SHIFT + W`: `wallpaper -N -n -r` (`-n`: no size filter, which would skip pictures smaller than 0.8 of the
+  largest screen).
 - `wallpaper -N` everywhere: without it the CLI switches light/dark from the picture.
 - mako drop-in with an `ExecCondition` on this session (impasto pattern): mako's D-Bus activation would otherwise
   take `org.freedesktop.Notifications` before Caelestia is up.
