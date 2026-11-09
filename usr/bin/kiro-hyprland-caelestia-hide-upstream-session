@@ -1,0 +1,28 @@
+#!/bin/sh
+#####################################################################
+# Author    : Erik Dubois
+# Website   : https://kiroproject.be
+#####################################################################
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
+#
+# Purpose:
+#   Hide upstream Hyprland session so only Kiro's own "Kiro
+#   Hyprland Caelestia" entry is offered in the display manager. Stamps NoDisplay=true
+#   onto /usr/share/wayland-sessions/hyprland.desktop (owned by the hyprland
+#   package) when it is not already present.
+# Why:
+#   The Kiro edition reads ~/.config/kiro-hyprland-caelestia/
+#####################################################################
+
+desktop=/usr/share/wayland-sessions/hyprland.desktop
+
+[ -f "$desktop" ] || exit 0
+grep -q '^NoDisplay=true$' "$desktop" && exit 0
+printf 'NoDisplay=true\n' >> "$desktop"
+
+
+desktop=/usr/share/wayland-sessions/hyprland-uwsm.desktop
+
+[ -f "$desktop" ] || exit 0
+grep -q '^NoDisplay=true$' "$desktop" && exit 0
+printf 'NoDisplay=true\n' >> "$desktop"

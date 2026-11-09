@@ -1,0 +1,13 @@
+{
+    "theme": {
+        "iconTheme": "Surfn",
+        "enableHypr": false,
+        "enableQt": false,
+        "enableChromium": false,
+        "enableDiscord": false,
+        "enableSpicetify": false,
+        "enablePandora": false,
+        "enableWarp": false,
+        "enableZed": false
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "general": {
+        "apps": {
+            "terminal": ["alacritty"],
+            "audio": ["pavucontrol"],
+            "playback": ["vlc"],
+            "explorer": ["thunar"]
+        },
+        "idle": {
+            "lockBeforeSleep": true,
+            "timeouts": [
+                {
+                    "timeout": 900,
+                    "idleAction": "dpms off",
+                    "returnAction": "dpms on"
+                }
+            ]
+        }
+    },
+    "paths": {
+        "wallpaperDir": "/usr/share/backgrounds/kiro"
+    }
+}

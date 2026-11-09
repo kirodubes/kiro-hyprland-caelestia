@@ -1,0 +1,14 @@
+# Re-hide upstream Hyprland's session after any Hyprland install/upgrade
+# restores /usr/share/wayland-sessions/hyprland.desktop. Keeps the Kiro Hyprland entries
+# the only selectable "Hyprland". See /usr/bin/kiro-hyprland-caelestia-hide-upstream-session.
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Path
+Target = usr/share/wayland-sessions/hyprland.desktop
+Target = usr/share/wayland-sessions/hyprland-uwsm.desktop
+
+[Action]
+Description = Hiding upstream Hyprland session (Kiro Hyprland Caelestia is the supported entry)...
+When = PostTransaction
+Exec = /usr/bin/kiro-hyprland-caelestia-hide-upstream-session

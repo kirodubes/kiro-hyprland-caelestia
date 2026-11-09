@@ -1,0 +1,29 @@
+#!/bin/sh
+#####################################################################
+# Author    : Erik Dubois
+# Website   : https://kiroproject.be
+#####################################################################
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
+#
+# Purpose:
+#   Session entrypoint for the Kiro Hyprland (caelestia) edition, invoked by
+#   kiro-hyprland-caelestia.desktop. Launches Hyprland pointed at this edition's
+#   own config folder (~/.config/kiro-hyprland-caelestia/hyprland.lua) via the
+#   --config flag, so it never reads ~/.config/hypr/.
+# Why:
+#   kiro-hyprland-caelestia and the waybar-based kiro-hyprland edition both target
+#   Hyprland but ship different configs. Sharing ~/.config/hypr/ means switching
+#   editions inherits the other one's stale config. Pointing Hyprland at a
+#   per-edition config folder keeps them cleanly separate and co-installable.
+#   Launched through uwsm (Universal Wayland Session Manager) rather than a bare
+#   Hyprland exec: Hyprland (0.49+) shows a persistent on-screen banner nagging
+#   that it was started WITHOUT uwsm, and uwsm is the upstream-recommended launch
+#   method (it sets up the systemd user session + imports the environment). The
+#   --config flag still points Hyprland at this edition's own config folder.
+#   start-hyprland (from the hyprland package) runs Hyprland with --watchdog-fd,
+#   so a crashed or hung compositor can be recovered; Hyprland 0.56 warns when
+#   it is launched without it. `-e -D Hyprland` keeps XDG_CURRENT_DESKTOP=Hyprland
+#   so the portals still pick the Hyprland backend.
+#####################################################################
+
+exec uwsm start -e -D Hyprland -- start-hyprland -- --config "$HOME/.config/kiro-hyprland-caelestia/hyprland.lua" "$@"

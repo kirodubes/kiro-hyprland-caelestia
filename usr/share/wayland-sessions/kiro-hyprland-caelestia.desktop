@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Kiro Hyprland Caelestia
+Comment=Kiro Hyprland edition (Hyprland + caelestia)
+Exec=kiro-hyprland-caelestia-session
+Type=Application
+DesktopNames=Hyprland

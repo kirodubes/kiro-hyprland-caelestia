@@ -1,0 +1,150 @@
+###############################################################################
+#  KEYBINDINGS — Kiro Hyprland (Caelestia)
+#  Source: etc/skel/.config/kiro-hyprland-caelestia/hyprland.lua
+#  Reference for the default bindings. Changed yours? Edit this file to match.
+#  Shell:  Caelestia (launcher / dashboard / lock / notifications / wallpaper)
+###############################################################################
+
+── 1. Applications & Launchers ────────────────────────────────────────────────
+  super + Return          Terminal
+  super + T               Terminal
+  super + shift + Return  File manager
+  super + shift + F       File manager
+  super + E               Code editor
+  super + shift + N       Code editor
+  super + shift + B       Browser (your default browser)
+  super + shift + M       Spotify
+  super + ctrl + shift + A  AI agent (claude in your terminal)
+  super + D               App launcher (Caelestia)
+  super + Space           App launcher (Caelestia)
+  super + ctrl + Return   App launcher (Caelestia)
+  super + S               Dashboard (Caelestia)
+  super + shift + S       Caelestia settings
+  super + V               Volume control
+  super + ctrl + A        Volume control
+  super + O               Colour picker
+  super + N               Notifications sidebar
+  super + alt + V         Clipboard history
+  ctrl + alt + A          Alacritty tweak tool
+  ctrl + alt + B          Brave
+  ctrl + alt + C          Chromium
+  ctrl + alt + D          OBS Studio
+  ctrl + alt + E          Tweak tool
+  ctrl + alt + H          Kirotux Hyprland Premium (comes with the KIROTUX ISOs)
+  ctrl + alt + F          Firefox
+  ctrl + alt + G          Chromium
+  ctrl + alt + I          Kiro ISO builder
+  ctrl + alt + M          USB image writer
+  ctrl + alt + O          Opera
+  ctrl + alt + P          Package manager
+  ctrl + alt + Q          Alacritty tweak tool
+  ctrl + alt + Return     Terminal
+  ctrl + alt + T          Terminal
+  ctrl + alt + S          Tweak tool
+  ctrl + alt + U          Volume control
+  ctrl + alt + V          Vivaldi
+  ctrl + alt + W          Fastfetch tweak tool
+  ctrl + alt + Z          Fastfetch tweak tool
+  ctrl + alt + End        System monitor
+  ctrl + shift + Escape   System monitor
+  super + F1              Browser (your default browser)
+  super + F2              Code editor
+  super + F3              Inkscape
+  super + F4              GIMP
+  super + F5              Meld
+  super + F6              VLC
+  super + F7              VirtualBox
+  super + F8              File manager
+  super + F9              Virt-manager
+  super + F10             Spotify
+  super + F11             App launcher (Caelestia)
+  super + F12             App launcher (Caelestia)
+
+── 2. Window Management ───────────────────────────────────────────────────────
+  super + Q               Close window
+  super + shift + Q       Close window
+  super + shift + Space   Toggle floating
+  super + F               Fullscreen
+  super + alt + F         Maximize
+  super + P               Pseudo-tile
+  super + left            Focus left
+  super + right           Focus right
+  super + up              Focus up
+  super + down            Focus down
+  super + shift + left    Swap left
+  super + shift + right   Swap right
+  super + shift + up      Swap up
+  super + shift + down    Swap down
+  super + shift + H       Shrink width
+  super + shift + L       Grow width
+  super + shift + K       Shrink height
+  super + shift + J       Grow height
+  super + left-click      Move window
+  super + right-click     Resize window
+
+── 3. Workspaces / Tags / Groups ──────────────────────────────────────────────
+  super + 1..0            Workspace 1..10  (AZERTY: same physical keys)
+  super + ctrl + 1..0     Move to workspace 1..10
+  super + shift + 1..0    Send to workspace 1..10
+  super + period          Next workspace
+  super + comma           Previous workspace
+  super + scroll down     Next workspace
+  super + scroll up       Previous workspace
+  super + Tab             Next workspace
+  super + shift + Tab     Previous workspace
+  super + U               Toggle scratchpad
+  super + shift + U       Send to scratchpad
+  super + G               Toggle group
+  super + ctrl + left     Into group left
+  super + ctrl + right    Into group right
+  super + ctrl + up       Into group up
+  super + ctrl + down     Into group down
+
+── 4. Layout & Tiling ─────────────────────────────────────────────────────────
+  super + J               Toggle split
+  super + I               Add master
+  super + ctrl + Space    Swap with master
+
+── 6. Multimedia & Hardware ───────────────────────────────────────────────────
+  XF86AudioRaiseVolume    Volume up
+  XF86AudioLowerVolume    Volume down
+  alt + XF86AudioRaiseVolume  Volume up 1%
+  alt + XF86AudioLowerVolume  Volume down 1%
+  XF86AudioMute           Mute
+  XF86AudioMicMute        Mic mute
+  XF86AudioPlay           Play / pause
+  XF86AudioPause          Play / pause
+  XF86AudioNext           Next track
+  XF86AudioPrev           Previous track
+  XF86MonBrightnessUp     Brightness up
+  XF86MonBrightnessDown   Brightness down
+
+── 6b. Wallpaper (Variety) ────────────────────────────────────────────────────
+  alt + N                 Next wallpaper
+  alt + P                 Previous wallpaper
+  alt + T                 Trash wallpaper
+  alt + F                 Favorite wallpaper
+  alt + shift + N         Next wallpaper
+  alt + shift + P         Previous wallpaper
+  alt + shift + T         Trash wallpaper
+  alt + shift + F         Favorite wallpaper
+  ctrl + ctrl             Switch keyboard layout (left + right Ctrl)
+
+── 7. Screenshots ─────────────────────────────────────────────────────────────
+  Print                   Screenshot region  -> ~/Pictures/Screenshots + clipboard
+  super + Print           Screenshot screen  -> ~/Pictures/Screenshots + clipboard
+
+── 8. System & Session ────────────────────────────────────────────────────────
+  super + X               Logout menu
+  super + shift + X       Logout menu
+  super + alt + L         Lock screen (Caelestia)
+  super + ctrl + L        Lock screen (Caelestia)
+  ctrl + alt + R          Lock screen (Caelestia)
+  super + shift + W       Random Kiro wallpaper (picker: type >wallpaper in the launcher)
+  super + Escape          Kill mode
+  super + ctrl + S        Show keybindings
+  super + K               Show keybindings
+  ctrl + alt + K          Logout menu
+  super + shift + R       Reload Hyprland
+  super + ctrl + alt + R  Restart Caelestia
+  ctrl + alt + L          Logout settings
