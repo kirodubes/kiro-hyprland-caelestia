@@ -291,7 +291,7 @@ check_wallpaper_theme() {
     check "scheme generated" test -s "$HOME/.local/state/caelestia/scheme.json"
     local icon
     icon="$(gsettings get org.gnome.desktop.interface icon-theme)"
-    if [[ "$icon" == "'Surfn'" ]]; then pass "icon theme Surfn"; else warn "icon theme $icon (Kiro default Surfn)"; fi
+    if [[ "$icon" == "'Surfn-Kiro'" ]]; then pass "icon theme Surfn-Kiro"; else warn "icon theme $icon (Kiro default Surfn-Kiro)"; fi
     check_warn "color-scheme follows the gtk-4 setting" bash -c '
         want="prefer-dark"
         grep -qs "gtk-application-prefer-dark-theme=false" "$HOME/.config/gtk-4.0/settings.ini" && want="default"

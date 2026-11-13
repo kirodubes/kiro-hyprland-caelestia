@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026.11.13
+
+### What Changed
+- Caelestia's own icon setting (`cli.json` `iconTheme`) follows the new KiroTux default, Surfn Kiro. New users
+  only (skel).
+
+### Technical Details
+- `tests/live-check.sh` now expects `'Surfn-Kiro'` from gsettings, the kiro-wayland-dotfiles default.
+
+### Files Modified
+- `etc/skel/.config/caelestia/cli.json`, `tests/live-check.sh`, `CHANGELOG.md`
+
 ## 2026.11.09
 
 ### What Changed
